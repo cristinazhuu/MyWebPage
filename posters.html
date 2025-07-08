@@ -1,113 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Posters | Songning Zhu</title>
+  <title>Posters</title>
+  <link rel="stylesheet" href="css/styles.css" />
   <style>
     body {
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      background-color: #f8f8f8;
     }
 
-    header, footer {
-      background-color: #fff;
-      padding: 20px;
+    header {
+      background-color: #ffffff;
+      padding: 2rem;
       text-align: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    h1 {
+    header h1 {
       margin: 0;
+      font-size: 2rem;
+    }
+
+    header p {
+      margin: 0.5rem 0 0;
+      color: #555;
     }
 
     nav {
-      margin-top: 10px;
+      text-align: center;
+      margin: 1rem 0;
     }
 
     nav a {
-      margin: 0 15px;
+      margin: 0 1rem;
       text-decoration: none;
-      color: #6c2eb9;
-      font-weight: bold;
+      color: #333;
     }
 
     .poster-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
-      padding: 40px;
+      gap: 2rem;
+      padding: 2rem;
     }
 
     .poster {
-      width: 300px;
-      background-color: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    .poster:hover {
-      transform: translateY(-5px);
+      text-align: center;
+      width: 180px;
     }
 
     .poster img {
       width: 100%;
       height: auto;
-      display: block;
+      max-width: 160px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
     }
 
-    .poster-title {
-      padding: 10px;
-      text-align: center;
-      font-size: 16px;
+    .poster img:hover {
+      transform: scale(1.05);
+    }
+
+    .poster a {
+      text-decoration: none;
+      color: #5a2a83;
       font-weight: bold;
-      color: #333;
+      display: block;
+      margin-top: 0.5rem;
     }
 
     footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #666;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Songning Zhu, Ph.D. Candidate</h1>
     <p>Hyperspectral Imaging | Machine Learning | Chemoresistance</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="posters.html">Posters</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
   </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="posters.html">Posters</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <main class="poster-grid">
     <div class="poster">
       <a href="assets/poster1_thumb.pdf" target="_blank">
         <img src="assets/poster1_thumb.png" alt="Poster 1 Thumbnail">
-        <div class="poster-title">Organelle Dynamics in Tamoxifen Resistance (2024)</div>
+        <span>Organelle Dynamics in Tamoxifen Resistance (2024)</span>
       </a>
     </div>
 
     <div class="poster">
       <a href="assets/ccbs_thumb.pdf" target="_blank">
         <img src="assets/ccbs_thumb.png" alt="CCBS Poster Thumbnail">
-        <div class="poster-title">CCBS Poster (2024)</div>
+        <span>CCBS Poster (2024)</span>
       </a>
     </div>
 
-    <!-- Add more posters here following the same pattern -->
+    <!-- Add more poster blocks here as needed -->
   </main>
 
   <footer>
     &copy; 2025 Songning Zhu
   </footer>
 </body>
+
 </html>
