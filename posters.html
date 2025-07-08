@@ -4,83 +4,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Posters</title>
+  <title>Posters | Songning Zhu</title>
   <link rel="stylesheet" href="css/styles.css" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f8f8;
+      background-color: #f5f7fa;
+      color: #222;
     }
 
     header {
-      background-color: #ffffff;
-      padding: 2rem;
+      background-color: #002b45;
+      color: white;
+      padding: 2rem 1rem;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     header h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.2rem;
+      font-weight: 600;
     }
 
     header p {
-      margin: 0.5rem 0 0;
-      color: #555;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #cce6ff;
     }
 
     nav {
+      background-color: #e8edf3;
+      padding: 0.75rem;
       text-align: center;
-      margin: 1rem 0;
     }
 
     nav a {
-      margin: 0 1rem;
+      margin: 0 1.2rem;
       text-decoration: none;
-      color: #333;
+      color: #00334e;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     .poster-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 2rem;
-      padding: 2rem;
-      justify-items: center;
+      padding: 3rem;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
     .poster {
       position: relative;
-      width: 160px;
-      height: 220px;
       overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-      text-decoration: none;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease;
     }
 
     .poster img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
       display: block;
     }
 
     .poster:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
     }
 
     .poster span {
       position: absolute;
       bottom: 0;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      font-size: 0.8rem;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      font-size: 0.85rem;
       text-align: center;
-      padding: 0.5rem;
+      padding: 0.6rem 0.4rem;
       opacity: 0;
       transition: opacity 0.3s ease;
     }
@@ -90,10 +96,11 @@
     }
 
     footer {
+      background-color: #002b45;
+      color: #cce6ff;
       text-align: center;
       padding: 2rem 1rem;
       font-size: 0.9rem;
-      color: #888;
     }
   </style>
 </head>
@@ -103,6 +110,7 @@
     <h1>Songning Zhu, Ph.D. Candidate</h1>
     <p>Hyperspectral Imaging | Machine Learning | Chemoresistance</p>
   </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="posters.html">Posters</a>
