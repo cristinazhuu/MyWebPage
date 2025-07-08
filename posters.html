@@ -43,37 +43,47 @@
     }
 
     .poster-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 2rem;
       padding: 2rem;
+      justify-items: center;
     }
 
     .poster {
-      text-align: center;
-      width: 120px;
-    }
-
-    .poster img {
-      width: 100%;
-      height: auto;
+      position: relative;
+      width: 140px;
+      overflow: hidden;
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
 
-    .poster img:hover {
+    .poster img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .poster:hover {
       transform: scale(1.05);
     }
 
-    .poster a {
-      text-decoration: none;
-      color: #5a2a83;
-      font-weight: bold;
-      display: block;
-      margin-top: 0.5rem;
-      font-size: 0.8rem;
+    .poster span {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 0.3rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .poster:hover span {
+      opacity: 1;
     }
 
     footer {
@@ -98,19 +108,15 @@
   </nav>
 
   <main class="poster-grid">
-    <div class="poster">
-      <a href="assets/poster1_thumb.pdf" target="_blank">
-        <img src="assets/poster1_thumb.png" alt="Poster 1 Thumbnail">
-        <span>Organelle Dynamics in Tamoxifen Resistance (2024)</span>
-      </a>
-    </div>
+    <a href="assets/poster1_thumb.pdf" class="poster" target="_blank">
+      <img src="assets/poster1_thumb.png" alt="Poster 1 Thumbnail">
+      <span>Organelle Dynamics in Tamoxifen Resistance (2024)</span>
+    </a>
 
-    <div class="poster">
-      <a href="assets/ccbs_thumb.pdf" target="_blank">
-        <img src="assets/ccbs_thumb.png" alt="CCBS Poster Thumbnail">
-        <span>CCBS Poster (2024)</span>
-      </a>
-    </div>
+    <a href="assets/ccbs_thumb.pdf" class="poster" target="_blank">
+      <img src="assets/ccbs_thumb.png" alt="CCBS Poster Thumbnail">
+      <span>CCBS Poster (2024)</span>
+    </a>
   </main>
 
   <footer>
