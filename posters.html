@@ -53,7 +53,7 @@
 
     .poster-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 2rem;
       padding: 3rem;
       max-width: 1200px;
@@ -66,11 +66,13 @@
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
       transition: transform 0.25s ease;
+      aspect-ratio: 4 / 3;
     }
 
     .poster img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
 
