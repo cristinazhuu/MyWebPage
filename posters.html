@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Songning Zhu | Hyperspectral Imaging & ML</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; }
+    header, footer { background-color: #f4f4f4; text-align: center; padding: 1rem; }
+    nav a { margin: 0 10px; text-decoration: none; color: #333; }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 2rem;
+    }
+    .poster {
+      position: relative;
+      overflow: hidden;
+    }
+    .poster img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+    .poster:hover img {
+      transform: scale(1.05);
+    }
+    .poster .title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      padding: 0.5rem;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .poster:hover .title {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Songning Zhu, Ph.D. Candidate</h1>
+    <p>Hyperspectral Imaging | Machine Learning | Chemoresistance</p>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="posters.html">Posters</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="grid-container">
+      <div class="poster">
+        <a href="assets/poster1.pdf" target="_blank">
+          <img src="assets/poster1_thumb.jpg" alt="Poster 1">
+          <div class="title">Organelle Dynamics in Tamoxifen Resistance (2024)</div>
+        </a>
+      </div>
+      <div class="poster">
+        <a href="assets/poster2.pdf" target="_blank">
+          <img src="assets/poster2_thumb.jpg" alt="Poster 2">
+          <div class="title">IVF Oocyte Classification with Phasor (2023)</div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Songning Zhu</p>
+  </footer>
+</body>
+</html>
