@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Posters</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header>
@@ -19,30 +19,32 @@
   </header>
 
   <main>
-    <section class="grid-container">
-      <!-- Poster 1 -->
-      <div class="poster">
-        <a href="assets/poster1_thumb.pdf" target="_blank">
-          <img src="assets/poster1_thumb.png" alt="Poster 1">
-          <div class="title">Poster 1</div>
+    <section class="poster-grid">
+
+      <div class="poster-card">
+        <h2>Poster 1</h2>
+        <a href="assets/poster1.pdf" target="_blank">
+          <img src="assets/poster1_thumb.png" alt="Poster 1 Thumbnail" />
         </a>
+        <p class="caption">Organelle Dynamics in Tamoxifen Resistance (2024)</p>
       </div>
 
-      <!-- Poster 2 (not yet uploaded) -->
-      <div class="poster">
+      <div class="poster-card">
+        <h2>Poster 2</h2>
         <a href="assets/poster2.pdf" target="_blank">
-          <img src="assets/poster2_thumb.png" alt="Poster 2">
-          <div class="title">Poster 2</div>
+          <img src="assets/poster2_thumb.png" alt="Poster 2 Thumbnail" />
         </a>
+        <p class="caption">IVF Oocyte Classification with Phasor (2023)</p>
       </div>
 
-      <!-- CCBS Poster -->
-      <div class="poster">
+      <div class="poster-card">
+        <h2>CCBS Poster</h2>
         <a href="assets/ccbs_thumb.pdf" target="_blank">
-          <img src="assets/ccbs_thumb.png" alt="CCBS Poster">
-          <div class="title">IVF Oocyte Classification with Phasor (2023)</div>
+          <img src="assets/ccbs_thumb.png" alt="CCBS Poster Thumbnail" />
         </a>
+        <p class="caption">CCBS Retreat Poster (2025)</p>
       </div>
+
     </section>
   </main>
 
