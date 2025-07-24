@@ -22,16 +22,35 @@
       text-align: center;
     }
 
-    header h1 {
+    .header-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .header-text h1 {
       margin: 0;
       font-size: 2.2rem;
       font-weight: 600;
     }
 
-    header p {
+    .header-text p {
       margin-top: 0.5rem;
       font-size: 1rem;
       color: #cce6ff;
+    }
+
+    .logo {
+      height: 80px;
+      border-radius: 50%;
     }
 
     nav {
@@ -51,50 +70,37 @@
       text-decoration: underline;
     }
 
-    .poster-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-      padding: 3rem;
+    main {
       max-width: 1200px;
-      margin: 0 auto;
+      margin: 3rem auto;
+      padding: 0 2rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
 
-    .poster {
-      position: relative;
-      overflow: hidden;
+    .poster-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .poster-card {
+      background-color: white;
       border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-      transition: transform 0.25s ease;
-      aspect-ratio: 4 / 3;
-    }
-
-    .poster img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .poster:hover {
-      transform: translateY(-5px);
-    }
-
-    .poster span {
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.6);
-      color: #fff;
-      font-size: 0.85rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 300px;
       text-align: center;
-      padding: 0.6rem 0.4rem;
-      opacity: 0;
-      transition: opacity 0.3s ease;
     }
 
-    .poster:hover span {
-      opacity: 1;
+    .poster-card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .poster-card h3 {
+      margin: 1rem;
     }
 
     footer {
@@ -109,8 +115,13 @@
 
 <body>
   <header>
-    <h1>Songning Zhu, Ph.D. Candidate</h1>
-    <p>Hyperspectral Imaging | Machine Learning | Cell Biology</p>
+    <div class="header-inner">
+      <div class="header-text">
+        <h1>Songning Zhu, Ph.D. Candidate</h1>
+        <p>Hyperspectral Imaging | Machine Learning | Chemoresistance</p>
+      </div>
+      <img src="assets/logo_high_quality.png" alt="Logo" class="logo" />
+    </div>
   </header>
 
   <nav>
@@ -118,23 +129,19 @@
     <a href="posters.html">Posters</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
+    <a href="resume.html">Resume</a>
   </nav>
 
-  <main class="poster-grid">
-    <a href="assets/poster1_thumb.pdf" class="poster" target="_blank">
-      <img src="assets/poster1_thumb.png" alt="Poster 1 Thumbnail">
-      <span>Organelle Dynamics in Tamoxifen Resistance (2024)</span>
-    </a>
-
-    <a href="assets/ccbs_thumb.pdf" class="poster" target="_blank">
-      <img src="assets/ccbs_thumb.png" alt="CCBS Poster Thumbnail">
-      <span>CCBS Poster (2024)</span>
-    </a>
-
-    <a href="assets/2022_BPS.pdf" class="poster" target="_blank">
-      <img src="assets/2022_BPS.png" alt="2022 BPS Poster Thumbnail">
-      <span>BPS Poster (2022)</span>
-    </a>
+  <main>
+    <h2>Posters</h2>
+    <div class="poster-gallery">
+      <div class="poster-card">
+        <img src="assets/poster1_thumbnail.png" alt="Poster 1" />
+        <h3>Biophysical Journal 2022</h3>
+        <a href="assets/poster1_full.pdf" target="_blank">View Full Poster</a>
+      </div>
+      <!-- Add more posters below as needed -->
+    </div>
   </main>
 
   <footer>
