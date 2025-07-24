@@ -20,32 +20,16 @@
       color: white;
       padding: 2rem 1rem;
       text-align: center;
-    }
-
-    .header-inner {
       display: flex;
-      justify-content: center;
       align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
     }
 
-    .header-text {
+    .header-content {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-    }
-
-    .header-text h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      font-weight: 600;
-    }
-
-    .header-text p {
-      margin-top: 0.5rem;
-      font-size: 1rem;
-      color: #cce6ff;
     }
 
     .logo {
@@ -71,36 +55,41 @@
     }
 
     main {
-      max-width: 1200px;
+      max-width: 1000px;
       margin: 3rem auto;
       padding: 0 2rem;
-      font-size: 1.1rem;
-      line-height: 1.6;
     }
 
     .poster-gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.5rem;
+      gap: 2rem;
       justify-content: center;
     }
 
     .poster-card {
       background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      width: 250px;
       text-align: center;
+      padding: 1rem;
     }
 
     .poster-card img {
       width: 100%;
-      height: auto;
+      border-radius: 6px;
     }
 
     .poster-card h3 {
-      margin: 1rem;
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    .poster-card a {
+      color: #006699;
+      text-decoration: none;
+      font-weight: 500;
     }
 
     footer {
@@ -115,13 +104,11 @@
 
 <body>
   <header>
-    <div class="header-inner">
-      <div class="header-text">
-        <h1>Songning Zhu, Ph.D. Candidate</h1>
-        <p>Hyperspectral Imaging | Machine Learning | Chemoresistance</p>
-      </div>
-      <img src="assets/logo_high_quality.png" alt="Logo" class="logo" />
+    <div class="header-content">
+      <h1>Songning Zhu, Ph.D. Candidate</h1>
+      <p>Hyperspectral Imaging | Machine Learning | Chemoresistance</p>
     </div>
+    <img src="assets/logo_high_quality.png" alt="Logo" class="logo" />
   </header>
 
   <nav>
@@ -133,14 +120,23 @@
   </nav>
 
   <main>
-    <h2>Posters</h2>
+    <h2>Poster Gallery</h2>
     <div class="poster-gallery">
       <div class="poster-card">
-        <img src="assets/poster1_thumbnail.png" alt="Poster 1" />
-        <h3>Biophysical Journal 2022</h3>
-        <a href="assets/poster1_full.pdf" target="_blank">View Full Poster</a>
+        <img src="assets/2022_BPS.png" alt="2022 BPS Poster" />
+        <h3>2022 Biophysical Society</h3>
+        <a href="assets/2022_BPS.pdf" target="_blank">View Poster</a>
       </div>
-      <!-- Add more posters below as needed -->
+      <div class="poster-card">
+        <img src="assets/ccbs_thumb.png" alt="CCBS Poster" />
+        <h3>CCBS Research Symposium</h3>
+        <a href="assets/ccbs_thumb.pdf" target="_blank">View Poster</a>
+      </div>
+      <div class="poster-card">
+        <img src="assets/poster1_thumb.png" alt="Generic Poster" />
+        <h3>Other Project Poster</h3>
+        <a href="assets/poster1_thumb.pdf" target="_blank">View Poster</a>
+      </div>
     </div>
   </main>
 
