@@ -1,1 +1,8 @@
+body {
+  background-image: url('assets/ccbs_background_high_quality.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
 
