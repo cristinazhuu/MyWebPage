@@ -38,7 +38,6 @@
       text-decoration: none;
       color: white;
       font-size: 1rem;
-      font-family: 'Times New Roman', Times, serif;
     }
 
     nav a:hover {
@@ -46,14 +45,30 @@
     }
 
     main {
-      max-width: 900px;
-      margin: 3rem auto;
+      position: relative;
+      background-image: url('assets/ccbs_background_high_quality.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      padding: 5rem 2rem 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .content-box {
+      background-color: rgba(0, 0, 0, 0.75);
       padding: 2rem;
-      font-size: 1.1rem;
-      line-height: 1.6;
-      background-color: rgba(255, 255, 255, 0.05);
       border-radius: 12px;
+      max-width: 900px;
+      line-height: 1.6;
+      font-size: 1.1rem;
       border: 1px solid white;
+    }
+
+    h2 {
+      margin-top: 0;
     }
 
     footer {
@@ -81,12 +96,12 @@
   </nav>
 
   <main>
-    <h2>About Me</h2>
-    <p>I am a biomedical engineering Ph.D. candidate at UC Irvine developing machine learning-driven hyperspectral imaging tools to study the subcellular dynamics underlying chemoresistance. My research bridges optics, imaging analysis, and deep learning to characterize organelle behavior under therapeutic stress, with the goal of developing more effective and personalized cancer treatments.</p>
-
-    <p>My scientific work includes phasor-based spectral unmixing, deep learning models for hyperspectral data, and automated image segmentation. I've presented my work at multiple national conferences and have contributed to high-impact publications.</p>
-
-    <p>Outside of research, I’ve been actively involved in the graduate community, serving on the graduate student board for three years, and I’m passionate about mentorship, science communication, and building inclusive academic spaces.</p>
+    <div class="content-box">
+      <h2>About Me</h2>
+      <p>I am a biomedical engineering Ph.D. candidate at UC Irvine developing machine learning-driven hyperspectral imaging tools to study the subcellular dynamics underlying chemoresistance. My research bridges optics, imaging analysis, and deep learning to characterize organelle behavior under therapeutic stress, with the goal of developing more effective and personalized cancer treatments.</p>
+      <p>My scientific work includes phasor-based spectral unmixing, deep learning models for hyperspectral data, and automated image segmentation. I've presented my work at multiple national conferences and have contributed to high-impact publications.</p>
+      <p>Outside of research, I’ve been actively involved in the graduate community, serving on the graduate student board for three years, and I’m passionate about mentorship, science communication, and building inclusive academic spaces.</p>
+    </div>
   </main>
 
   <footer>
