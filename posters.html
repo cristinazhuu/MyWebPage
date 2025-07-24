@@ -4,67 +4,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Songning Zhu</title>
+  <title>Posters | Songning Zhu</title>
   <link rel="stylesheet" href="css/styles.css" />
   <style>
     body {
       margin: 0;
       padding: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: black;
+      color: white;
+      font-family: 'Times New Roman', Times, serif;
     }
 
     header {
-      background-color: #000;
+      background-color: black;
       color: white;
+      text-align: center;
       padding: 2rem 1rem 1rem;
-      border-bottom: 1px solid #444;
+      border-bottom: 1px solid white;
     }
 
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-
-    .header-text {
-      text-align: left;
-    }
-
-    .header-text h1 {
-      font-size: 2.5rem;
+    header h1 {
       margin: 0;
+      font-size: 2.5rem;
     }
 
-    .header-text p {
+    header p {
       font-style: italic;
-      font-size: 1.1rem;
       margin-top: 0.5rem;
-      color: #ccc;
-    }
-
-    .logo {
-      height: 90px;
-      border-radius: 50%;
+      font-size: 1.1rem;
     }
 
     nav {
-      background-color: #000;
-      border-top: 1px solid #444;
-      border-bottom: 1px solid #444;
+      background-color: black;
       text-align: center;
       padding: 1rem 0;
+      border-bottom: 1px solid white;
     }
 
     nav a {
+      margin: 0 2rem;
       color: white;
-      margin: 0 1.5rem;
       text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 500;
+      font-size: 1rem;
     }
 
     nav a:hover {
@@ -72,52 +53,76 @@
     }
 
     main {
-      max-width: 800px;
+      max-width: 1100px;
       margin: 3rem auto;
-      padding: 2rem;
-      background-color: rgba(255, 255, 255, 0.05);
+      padding: 0 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .poster-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .poster-card {
+      position: relative;
+      width: 280px;
       border-radius: 10px;
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s;
     }
 
-    a {
-      color: #66ccff;
-      text-decoration: none;
+    .poster-card:hover {
+      transform: scale(1.05);
     }
 
-    a:hover {
-      text-decoration: underline;
+    .poster-card img {
+      width: 100%;
+      height: auto;
+      display: block;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
+    .poster-title {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      width: 100%;
+      text-align: center;
+      padding: 0.6rem 0;
+      font-size: 1rem;
+      opacity: 0;
+      transition: opacity 0.3s;
     }
 
-    ul li {
-      margin-bottom: 0.5rem;
+    .poster-card:hover .poster-title {
+      opacity: 1;
     }
 
     footer {
-      background-color: #000;
-      color: #aaa;
+      background-color: black;
+      color: #ccc;
       text-align: center;
       padding: 2rem 1rem;
-      border-top: 1px solid #444;
       font-size: 0.9rem;
+      border-top: 1px solid white;
     }
   </style>
 </head>
 
 <body>
+
   <header>
-    <div class="header-inner">
-      <div class="header-text">
-        <h1>Songning Zhu, Ph.D. Candidate</h1>
-        <p>Hyperspectral Imaging | Machine Learning | Cell Biology</p>
-      </div>
-      <img src="assets/logo_high_quality.png" alt="Logo" class="logo" />
-    </div>
+    <h1>Songning Zhu, Ph.D. Candidate</h1>
+    <p>Hyperspectral Imaging | Machine Learning | Cell Biology</p>
   </header>
 
   <nav>
@@ -129,21 +134,27 @@
   </nav>
 
   <main>
-    <h2>Contact</h2>
-    <p>If you'd like to get in touch, feel free to email me at:</p>
-    <p><strong>songningzhu [at] gmail [dot] com</strong></p>
-
-    <p>You can also connect with me on:</p>
-    <ul>
-      <li><a href="https://www.linkedin.com/in/songningzhu" target="_blank">LinkedIn</a></li>
-      <li><a href="https://scholar.google.com/citations?user=example" target="_blank">Google Scholar</a></li>
-      <li><a href="https://github.com/cristinazhuu" target="_blank">GitHub</a></li>
-    </ul>
+    <h2>Poster Gallery</h2>
+    <div class="poster-gallery">
+      <a href="assets/2022_BPS.pdf" target="_blank" class="poster-card">
+        <img src="assets/2022_BPS.png" alt="2022 BPS Poster" />
+        <div class="poster-title">2022 Biophysical Society</div>
+      </a>
+      <a href="assets/2025CCBS.pdf" target="_blank" class="poster-card">
+        <img src="assets/ccbs_thumb.png" alt="CCBS Poster" />
+        <div class="poster-title">2025 CCBS Research Symposium</div>
+      </a>
+      <a href="assets/poster1.pdf" target="_blank" class="poster-card">
+        <img src="assets/poster1_thumb.png" alt="Other Poster" />
+        <div class="poster-title">Organelle Dynamics Project</div>
+      </a>
+    </div>
   </main>
 
   <footer>
     &copy; 2025 Songning Zhu
   </footer>
+
 </body>
 
 </html>
