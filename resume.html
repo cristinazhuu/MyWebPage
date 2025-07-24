@@ -20,28 +20,32 @@
       color: white;
       padding: 2rem 1rem;
       text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
     }
 
-    header h1 {
+    .header-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .header-text h1 {
       margin: 0;
       font-size: 2.2rem;
       font-weight: 600;
     }
 
-    header p {
+    .header-text p {
       margin-top: 0.5rem;
       font-size: 1rem;
       color: #cce6ff;
-    }
-
-    .header-content {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
     }
 
     .logo {
@@ -86,11 +90,13 @@
 
 <body>
   <header>
-    <div class="header-content">
-      <h1>Songning Zhu, Ph.D. Candidate</h1>
-      <p>Hyperspectral Imaging | Machine Learning | Chemoresistance</p>
+    <div class="header-inner">
+      <div class="header-text">
+        <h1>Songning Zhu, Ph.D. Candidate</h1>
+        <p>Hyperspectral Imaging | Machine Learning | Chemoresistance</p>
+      </div>
+      <img src="assets/logo_high_quality.png" alt="Logo" class="logo" />
     </div>
-    <img src="assets/logo_high_quality.png" alt="Logo" class="logo" />
   </header>
 
   <nav>
