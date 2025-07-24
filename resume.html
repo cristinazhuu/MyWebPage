@@ -21,21 +21,6 @@
       text-align: center;
     }
 
-    main {
-      max-width: 1000px;
-      margin: 3rem auto;
-      padding: 2rem;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    iframe {
-      width: 100%;
-      height: 900px;
-      border: none;
-    }
-
     nav {
       background-color: #e8edf3;
       padding: 0.75rem;
@@ -52,11 +37,43 @@
     nav a:hover {
       text-decoration: underline;
     }
+
+    main {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    a.resume-link {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #002b45;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1.5rem;
+    }
+
+    a.resume-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #002b45;
+      color: #cce6ff;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>My Resume</h1>
+    <h1>Resume</h1>
     <p>Songning Zhu, Ph.D. Candidate</p>
   </header>
 
@@ -69,7 +86,15 @@
   </nav>
 
   <main>
-    <iframe src="assets/Song_Resume_07.09.2025.pdf"></iframe>
+    <h2>Download My Resume</h2>
+    <p>You can view or download my full resume as a PDF.</p>
+    <a href="assets/Song_Resume_07.09.2025.pdf" target="_blank" class="resume-link">
+      📄 Open Resume (PDF)
+    </a>
   </main>
+
+  <footer>
+    &copy; 2025 Songning Zhu
+  </footer>
 </body>
 </html>
