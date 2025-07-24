@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Songning Zhu</title>
-  <link rel="stylesheet" href="css/styles.css" />
   <style>
     body {
+      background-color: black;
+      color: white;
+      font-family: "Times New Roman", Times, serif;
       margin: 0;
       padding: 0;
-      background-color: #000;
-      color: white;
-      font-family: 'Times New Roman', Times, serif;
     }
 
     header {
       background-color: black;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem 1rem;
       border-bottom: 1px solid white;
+      padding: 2rem 1rem 1rem;
     }
 
-    header h1 {
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .header-text h1 {
       margin: 0;
       font-size: 2.5rem;
+      font-weight: bold;
     }
 
-    header p {
-      font-style: italic;
+    .header-text p {
+      font-size: 1.2rem;
       margin-top: 0.5rem;
-      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    .logo {
+      height: 100px;
+      border-radius: 50%;
     }
 
     nav {
@@ -61,11 +70,6 @@
       border-radius: 10px;
     }
 
-    h2 {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-    }
-
     footer {
       background-color: black;
       text-align: center;
@@ -76,12 +80,15 @@
     }
   </style>
 </head>
-
 <body>
-
   <header>
-    <h1>Songning Zhu, Ph.D. Candidate</h1>
-    <p>Hyperspectral Imaging | Machine Learning | Cell Biology</p>
+    <div class="header-inner">
+      <div class="header-text">
+        <h1>Songning Zhu, Ph.D. Candidate</h1>
+        <p>Hyperspectral Imaging | Machine Learning | Cell Biology</p>
+      </div>
+      <img src="images/logo.png" alt="Logo" class="logo" />
+    </div>
   </header>
 
   <nav>
@@ -94,25 +101,11 @@
 
   <main>
     <h2>About Me</h2>
-    <p>
-      I am a biomedical engineering Ph.D. candidate at UC Irvine developing machine learning–driven hyperspectral imaging tools
-      to study the subcellular dynamics underlying chemoresistance. My research bridges optics, imaging analysis, and deep learning
-      to characterize organelle behavior under therapeutic stress, with the goal of developing more effective and personalized cancer treatments.
-    </p>
-    <p>
-      My scientific work includes phasor-based spectral unmixing, deep learning models for hyperspectral data, and automated image segmentation.
-      I've presented my work at multiple national conferences and have contributed to high-impact publications.
-    </p>
-    <p>
-      Outside of research, I’ve been actively involved in the graduate community, serving on the graduate student board for three years,
-      and I’m passionate about mentorship, science communication, and building inclusive academic spaces.
-    </p>
+    <p>I am a biomedical engineering Ph.D. candidate at UC Irvine...</p>
   </main>
 
   <footer>
     &copy; 2025 Songning Zhu
   </footer>
-
 </body>
-
 </html>
