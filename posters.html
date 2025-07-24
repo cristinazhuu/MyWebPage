@@ -16,20 +16,39 @@
     }
 
     header {
-      background-color: #002b45;
-      color: white;
-      padding: 2rem 1rem;
+      background-color: white;
+      color: #111;
       text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
+      padding: 1.5rem 1rem 1rem;
+      border-bottom: 1px solid #ddd;
     }
 
-    .header-content {
+    .header-inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .header-text {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      font-weight: 600;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .header-text p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #666;
+      font-style: italic;
     }
 
     .logo {
@@ -38,16 +57,18 @@
     }
 
     nav {
-      background-color: #e8edf3;
-      padding: 0.75rem;
+      background-color: white;
+      padding: 1rem;
       text-align: center;
+      border-bottom: 1px solid #ddd;
     }
 
     nav a {
       margin: 0 1.2rem;
       text-decoration: none;
-      color: #00334e;
-      font-weight: 500;
+      color: #111;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 1rem;
     }
 
     nav a:hover {
@@ -68,54 +89,67 @@
     }
 
     .poster-card {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
       width: 250px;
-      text-align: center;
-      padding: 1rem;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     }
 
-    .poster-card img {
+    .poster-image {
+      position: relative;
+    }
+
+    .poster-image img {
       width: 100%;
-      border-radius: 6px;
+      display: block;
+      transition: filter 0.3s ease;
     }
 
-    .poster-card h3 {
+    .poster-card:hover img {
+      filter: brightness(65%);
+    }
+
+    .poster-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
       font-size: 1rem;
-      margin: 0.5rem 0;
+      padding: 0.6rem 1rem;
+      border-radius: 6px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+      text-align: center;
     }
 
-    .poster-card a {
-      color: #006699;
-      text-decoration: none;
-      font-weight: 500;
+    .poster-card:hover .poster-overlay {
+      opacity: 1;
     }
 
     footer {
-      background-color: #002b45;
-      color: #cce6ff;
+      background-color: white;
+      color: #111;
+      font-family: 'Times New Roman', Times, serif;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 1.5rem 1rem;
       font-size: 0.9rem;
+      border-top: 1px solid #ddd;
     }
   </style>
 </head>
 
 <body>
-
-  
   <header>
-    <div class="poster">
-  <a href="assets/2022_BPS.pdf" target="_blank">
-    <div class="poster-image">
-      <img src="assets/2022_BPS.png" alt="2022 BPS Poster" />
-      <div class="poster-overlay">2022 BPS</div>
+    <div class="header-inner">
+      <div class="header-text">
+        <h1>Songning Zhu, Ph.D. Candidate</h1>
+        <p>Hyperspectral Imaging | Machine Learning | Cell Biology</p>
+      </div>
+      <img src="assets/logo_high_quality.png" alt="Logo" class="logo" />
     </div>
-  </a>
-  </div>
-
-    <img src="assets/logo_high_quality.png" alt="Logo" class="logo" />
   </header>
 
   <nav>
@@ -130,19 +164,28 @@
     <h2>Poster Gallery</h2>
     <div class="poster-gallery">
       <div class="poster-card">
-        <img src="assets/2022_BPS.png" alt="2022 BPS Poster" />
-        <h3>2022 Biophysical Society</h3>
-        <a href="assets/2022_BPS.pdf" target="_blank">View Poster</a>
+        <a href="assets/2022_BPS.pdf" target="_blank">
+          <div class="poster-image">
+            <img src="assets/2022_BPS.png" alt="2022 BPS Poster" />
+            <div class="poster-overlay">2022 Biophysical Society</div>
+          </div>
+        </a>
       </div>
       <div class="poster-card">
-        <img src="assets/ccbs_thumb.png" alt="CCBS Poster" />
-        <h3>CCBS Research Symposium</h3>
-        <a href="assets/ccbs_thumb.pdf" target="_blank">View Poster</a>
+        <a href="assets/ccbs_thumb.pdf" target="_blank">
+          <div class="poster-image">
+            <img src="assets/ccbs_thumb.png" alt="CCBS Poster" />
+            <div class="poster-overlay">CCBS Research Symposium</div>
+          </div>
+        </a>
       </div>
       <div class="poster-card">
-        <img src="assets/poster1_thumb.png" alt="Generic Poster" />
-        <h3>Other Project Poster</h3>
-        <a href="assets/poster1_thumb.pdf" target="_blank">View Poster</a>
+        <a href="assets/poster1_thumb.pdf" target="_blank">
+          <div class="poster-image">
+            <img src="assets/poster1_thumb.png" alt="Generic Poster" />
+            <div class="poster-overlay">Other Project Poster</div>
+          </div>
+        </a>
       </div>
     </div>
   </main>
